@@ -38,6 +38,7 @@ const metrics = require("datadog-metrics");
 const { cpu } = require("node-os-utils");
 const Application = require("../database/models/application/application.js");
 const customCommand = require("../database/schemas/customCommand.js");
+const statsRouter = require("./routes/stats");
 //dont touch here
 const Hook = new Discord.WebhookClient({ url: jsonconfig.webhooks.votes });
 
@@ -105,6 +106,7 @@ module.exports = async (client) => {
   app.use(passport.session());
 
   app.locals.domain = domain.split("//")[1];
+  app.locals.client = client;
 
   app.engine("html", ejs.renderFile);
   app.set("view engine", "html");
@@ -4825,6 +4827,9 @@ In the mean time, please explain your issue below`;
       renderTemplate(res, req, "404.ejs");
     }
   });
+
+  // Stats API Router
+  app.use("/", statsRouter);
 
   app.listen(port, null, null, () =>
     logger.info(`Listening on port ${port}`, {
