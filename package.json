@@ -3,7 +3,8 @@
   "scripts": {
     "node": "node index.js",
     "dev": "nodemon index.js",
-    "start": "node ."
+    "start": "node .",
+    "verify-license": "node scripts/verify-license.js"
   },
   "devDependencies": {
     "eslint": "^7.6.0",

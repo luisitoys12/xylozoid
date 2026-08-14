@@ -100,21 +100,23 @@ Panel de control completo desde el navegador:
 | Personalización Total | ✅ 100% adaptable | ⚠️ Parcial | ⚠️ Parcial | ❌ Muy limitada |
 | Actualizaciones Constantes | ✅ Financiadas | ⚠️ Depende de donations | ⚠️ Depende de ventas | ❌ Lento en free |
 
-## 📦 Instalación y Acceso Premium
+## 📦 Instalación y Acceso Premium (Beta Cerrada con Ngrok)
 
-### ⚠️ Importante: Licencia Requerida
+### ⚠️ Importante: Licencia Requerida + Ngrok 24/7
 
 Este es un proyecto **premium de pago**. Para obtener acceso:
 
 1. **Adquiere tu licencia** en [xylozoid.dev/premium](https://xylozoid.dev/premium)
 2. Recibirás credenciales de acceso al repositorio privado
-3. Sigue las instrucciones de instalación abajo
+3. **Configura Ngrok** para exponer el dashboard 24/7 durante la beta cerrada
+4. Sigue las instrucciones de instalación abajo
 
 ### Requisitos Previos
 - Node.js v16 o superior
 - MongoDB (local o Atlas)
 - Una aplicación de Discord Developer Portal
 - **Licencia premium activa**
+- **Cuenta en Ngrok** (obligatorio para beta cerrada - acceso 24/7 al dashboard)
 
 ### Pasos de Instalación
 
@@ -146,32 +148,72 @@ CLIENT_SECRET=tu_client_secret
 MONGODB_URI=mongodb://localhost:27017/xylozoid
 
 # Dashboard
-BASE_URL=http://localhost:3000
 PORT=3000
 
 # Licencia Premium (requerido)
 XYLOZOID_LICENSE_KEY=tu_clave_de_licencia
 
+# Ngrok (requerido para beta cerrada)
+NGROK_AUTHTOKEN=tu_authtoken_de_ngrok
+
 # Opcional: Top.gg para votaciones
 TOP_GG_TOKEN=tu_token
 ```
 
-5. **Activa tu licencia premium**
+5. **Configura Ngrok para acceso 24/7**
+
+Durante esta **Beta Cerrada**, utilizamos Ngrok para exponer el dashboard permanentemente.
+
+*Paso A: Autenticar Ngrok (una sola vez)*
+```bash
+ngrok config add-authtoken TU_AUTHTOKEN_DE_NGROK
+```
+
+*Paso B: Iniciar el bot y el túnel en segundo plano*
+Para mantener el dashboard activo 24/7, ejecuta ambos procesos:
+
+```bash
+# Inicia el bot en background
+node index.js &
+
+# Inicia el túnel Ngrok hacia el puerto 3000 en background
+ngrok http 3000 --log=stdout > ngrok.log &
+```
+
+*Paso C: Obtener tu URL de acceso permanente*
+Revisa el log de Ngrok para obtener tu URL:
+```bash
+cat ngrok.log | grep "url="
+```
+O visita `http://localhost:4040` para ver el panel de control de Ngrok.
+
+Tu URL será algo como: `https://a1b2c3d4.ngrok.io`
+
+> 💡 **IMPORTANTE PARA LA BETA:**
+> - La versión gratuita de Ngrok cambia la URL si reinicias el proceso.
+> - Para mantener la misma URL 24/7 sin interrupciones, considera el plan **Ngrok Static Domain** ($8/mes).
+> - Mantén el proceso de Ngrok corriendo constantemente para que el dashboard esté siempre disponible.
+> - En producción final, reemplazaremos Ngrok con un dominio propio.
+
+6. **Activa tu licencia premium**
 ```bash
 npm run activate-license
 ```
 
-6. **Inicia el bot**
+7. **Inicia el bot** (si no lo hiciste en el paso 5B)
 ```bash
 node index.js
 ```
 
-5. **Invita al bot a tu servidor**
+8. **Invita al bot a tu servidor**
 ```
 https://discord.com/api/oauth2/authorize?client_id=TU_CLIENT_ID&permissions=8&scope=bot%20applications.commands
 ```
 
-> ⚠️ **Atención:** El bot solo funcionará correctamente si tu licencia premium está activa y verificada.
+9. **Accede al Dashboard**
+Usa la URL que te dio Ngrok (ej: `https://a1b2c3d4.ngrok.io`) para acceder al panel de control desde cualquier lugar.
+
+> ⚠️ **Atención:** El bot solo funcionará correctamente si tu licencia premium está activa y el túnel de Ngrok está corriendo para acceso al dashboard.
 
 ## 📁 Estructura del Proyecto
 
