@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMod Config - Xylozoid Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard-stats.css">
+  <style>
+    .automod-panel { max-width: 900px; margin: 2rem auto; padding: 2rem; }
+    .toggle-section { 
+      background: rgba(255,255,255,0.05); 
+      border-radius: 12px; 
+      padding: 1.5rem; 
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .toggle-header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem;
+    }
+    .toggle-switch {
+      position: relative;
+      width: 60px;
+      height: 30px;
+    }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider { background-color: #00ff88; }
+    input:checked + .slider:before { transform: translateX(30px); }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: #aaa; }
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .btn-save {
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .btn-save:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,255,136,0.4); }
+  </style>
+</head>
+<body>
+  <div class="automod-panel">
+    <h1 style="text-align: center; margin-bottom: 2rem;">🛡️ Configuración de AutoMod</h1>
+    
+    <form id="automodForm">
+      <!-- Anti-Spam -->
+      <div class="toggle-section">
+        <div class="toggle-header">
+          <h3>🚫 Anti-Spam</h3>
+          <label class="toggle-switch">
+            <input type="checkbox" name="antiSpam" <%= config.antiSpam.enabled ? 'checked' : '' %>>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p style="color: #888; font-size: 0.9rem;">Detecta y previene mensajes repetidos rápidos</p>
+      </div>
+
+      <!-- Anti-Links -->
+      <div class="toggle-section">
+        <div class="toggle-header">
+          <h3>🔗 Anti-Links</h3>
+          <label class="toggle-switch">
+            <input type="checkbox" name="antiLinks" <%= config.antiLinks.enabled ? 'checked' : '' %>>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p style="color: #888; font-size: 0.9rem;">Bloquea enlaces no autorizados</p>
+      </div>
+
+      <!-- Anti-Invites -->
+      <div class="toggle-section">
+        <div class="toggle-header">
+          <h3>📧 Anti-Invites de Discord</h3>
+          <label class="toggle-switch">
+            <input type="checkbox" name="antiInvites" <%= config.antiInvites.enabled ? 'checked' : '' %>>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p style="color: #888; font-size: 0.9rem;">Elimina invitaciones a otros servidores</p>
+      </div>
+
+      <!-- Anti-Mass Mention -->
+      <div class="toggle-section">
+        <div class="toggle-header">
+          <h3>👥 Anti-Mass Mention</h3>
+          <label class="toggle-switch">
+            <input type="checkbox" name="antiMassMention" <%= config.antiMassMention.enabled ? 'checked' : '' %>>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p style="color: #888; font-size: 0.9rem;">Previene menciones masivas (>5 usuarios)</p>
+      </div>
+
+      <!-- Palabras Prohibidas -->
+      <div class="toggle-section">
+        <h3>🚷 Palabras Prohibidas</h3>
+        <div class="form-group">
+          <label>Lista de palabras (separadas por coma)</label>
+          <textarea 
+            class="form-control" 
+            name="prohibitedWords" 
+            rows="3"
+            placeholder="ejemplo: spam, insulto, groseria"><%= config.prohibitedWords.join(', ') %></textarea>
+        </div>
+      </div>
+
+      <!-- Castigo -->
+      <div class="toggle-section">
+        <h3>⚖️ Castigo por Infracción</h3>
+        <div class="form-group">
+          <select class="form-control" name="punishment">
+            <option value="warn" <%= config.punishment === 'warn' ? 'selected' : '' %>>⚠️ Warn</option>
+            <option value="mute" <%= config.punishment === 'mute' ? 'selected' : '' %>>🔇 Mute Temporal</option>
+            <option value="kick" <%= config.punishment === 'kick' ? 'selected' : '' %>>👢 Kick</option>
+            <option value="ban" <%= config.punishment === 'ban' ? 'selected' : '' %>>🔨 Ban</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Roles Ignorados -->
+      <div class="toggle-section">
+        <h3>✅ Roles Ignorados (IDs separados por coma)</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" name="ignoredRoles" 
+                 value="<%= config.ignoredRoles.join(', ') %>" 
+                 placeholder="ID1, ID2, ID3">
+        </div>
+      </div>
+
+      <!-- Canales Ignorados -->
+      <div class="toggle-section">
+        <h3>✅ Canales Ignorados (IDs separados por coma)</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" name="ignoredChannels" 
+                 value="<%= config.ignoredChannels.join(', ') %>" 
+                 placeholder="ID1, ID2, ID3">
+        </div>
+      </div>
+
+      <button type="submit" class="btn-save">💾 Guardar Configuración</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('automodForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Convertir checkboxes
+      data.antiSpam = formData.has('antiSpam');
+      data.antiLinks = formData.has('antiLinks');
+      data.antiInvites = formData.has('antiInvites');
+      data.antiMassMention = formData.has('antiMassMention');
+
+      try {
+        const response = await fetch(`/dashboard/<%= guild.id %>/automod/update`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          alert('✅ Configuración guardada exitosamente');
+        } else {
+          alert('❌ Error: ' + result.message);
+        }
+      } catch (error) {
+        alert('❌ Error de conexión');
+      }
+    });
+  </script>
+</body>
+</html>

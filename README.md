@@ -1,11 +1,47 @@
-# 🤖 Xylozoid - Bot de Discord de Nueva Generación
+# 🤖 Xylozoid - Bot de Discord Premium de Nueva Generación
 
-> **Un proyecto de código abierto basado en la arquitectura de Pogy**, diseñado para competir con los mejores bots del mercado como ProBot, Dyno y MEE6.
+> **Un proyecto premium basado en la arquitectura de Pogy**, diseñado para superar a los mejores bots del mercado como ProBot, Dyno y MEE6 con funcionalidades exclusivas de pago.
 
 [![Discord](https://img.shields.io/badge/Discord-Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)
+[![Premium](https://img.shields.io/badge/Estado-Premium-GOLD?style=for-the-badge&logo=star&logoColor=white)](https://xylozoid.dev/premium)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 [![Node.js](https://img.shields.io/badge/Node.js-v16+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+
+## ⚠️ IMPORTANTE: Proyecto Premium de Pago
+
+**Xylozoid NO es gratuito.** A diferencia de otros bots que ofrecen versiones básicas sin costo, creemos en ofrecer un producto 100% premium desde el inicio para garantizar:
+
+- 🚀 **Rendimiento óptimo** sin limitaciones de servidores compartidos
+- 💎 **Funcionalidades exclusivas** que no encontrarás en bots gratuitos
+- 🛡️ **Soporte prioritario 24/7** directamente del equipo de desarrollo
+- 🔒 **Seguridad avanzada** con monitoreo constante
+- 📈 **Actualizaciones continuas** financiadas por la comunidad premium
+
+> **Necesitamos financiarnos para seguir operando.** Este es un proyecto profesional que requiere inversión en infraestructura, desarrollo y soporte.
+
+## 💎 Planes Premium Disponibles
+
+Adquiere nuestro **Plan Premium** y desbloquea todo el potencial:
+
+| Beneficio | Descripción |
+|-----------|-------------|
+| 🌟 Funcionalidades Exclusivas | Acceso a comandos y características únicas |
+| ⚡ Soporte Prioritario | Respuesta en menos de 1 hora |
+| 🎮 Eventos de Temporada | Juegos exclusivos y recompensas legendarias |
+| 📊 Dashboard Avanzado | Estadísticas en tiempo real y configuración ilimitada |
+| 🔧 Personalización Total | Configuraciones adaptadas a tu servidor |
+| 📜 Logs Completos | Auditoría detallada de todas las acciones |
+| 🚫 Sin Anuncios | Experiencia limpia sin promociones |
+
+### 🎮 Próximamente: Eventos de Temporada (Solo Premium)
+
+Prepárate para nuestra próxima gran actualización exclusiva para usuarios premium:
+
+- **Juegos Exclusivos de Temporada**: Minijuegos únicos disponibles solo por tiempo limitado
+- **Recompensas Legendarias**: Items, roles y badges que solo los usuarios premium podrán obtener
+- **Competencias Globales**: Tablas de clasificación entre servidores para los mejores jugadores
+- **Torneos con Premios Reales**: Competiciones organizadas con premios exclusivos
 
 ## ✨ Características Principales
 
@@ -51,40 +87,54 @@ Panel de control completo desde el navegador:
 - Diseño responsive y dark mode
 - Actualización automática cada 30s
 
-## 🚀 ¿Por qué Xylozoid?
+## 🚀 ¿Por qué Elegir Xylozoid Premium?
 
-| Característica | Xylozoid | ProBot | Dyno |
-|---------------|----------|--------|------|
-| Código Abierto | ✅ Sí | ❌ No | ❌ No |
-| Personalizable | ✅ 100% | ⚠️ Limitado | ⚠️ Limitado |
-| Sin Límites | ✅ Gratis | ⚠️ Premium | ⚠️ Premium |
-| Dashboard Moderno | ✅ Sí | ✅ Sí | ✅ Sí |
-| AutoMod Avanzado | ✅ Sí | ✅ Sí | ✅ Sí |
-| Sistema de Niveles | ✅ Sí | ✅ Sí | ❌ No |
-| Economía | ✅ Sí | ✅ Sí | ⚠️ Básico |
-| Soporte 24/7 | ✅ Comunidad | ✅ Pago | ✅ Pago |
+| Característica | Xylozoid Premium | ProBot | Dyno | MEE6 |
+|---------------|------------------|--------|------|------|
+| **Costo** | 💎 Premium (todo incluido) | ⚠️ Freemium | ⚠️ Freemium | ⚠️ Freemium |
+| Funcionalidades Exclusivas | ✅ Todas incluidas | ⚠️ Limitadas en free | ⚠️ Limitadas en free | ⚠️ Muy limitadas en free |
+| Soporte Prioritario | ✅ 24/7 directo | ⚠️ Solo premium | ⚠️ Solo premium | ⚠️ Solo premium |
+| Eventos de Temporada | ✅ Próxivamente | ❌ No | ❌ No | ❌ No |
+| Sin Límites Ocultos | ✅ Garantizado | ❌ Límites en free | ❌ Límites en free | ❌ Límites en free |
+| Dashboard Avanzado | ✅ Estadísticas en vivo | ✅ Sí | ✅ Sí | ⚠️ Básico |
+| Personalización Total | ✅ 100% adaptable | ⚠️ Parcial | ⚠️ Parcial | ❌ Muy limitada |
+| Actualizaciones Constantes | ✅ Financiadas | ⚠️ Depende de donations | ⚠️ Depende de ventas | ❌ Lento en free |
 
-## 📦 Instalación
+## 📦 Instalación y Acceso Premium
+
+### ⚠️ Importante: Licencia Requerida
+
+Este es un proyecto **premium de pago**. Para obtener acceso:
+
+1. **Adquiere tu licencia** en [xylozoid.dev/premium](https://xylozoid.dev/premium)
+2. Recibirás credenciales de acceso al repositorio privado
+3. Sigue las instrucciones de instalación abajo
 
 ### Requisitos Previos
 - Node.js v16 o superior
 - MongoDB (local o Atlas)
 - Una aplicación de Discord Developer Portal
+- **Licencia premium activa**
 
 ### Pasos de Instalación
 
-1. **Clona el repositorio**
+1. **Clona el repositorio privado** (solo con licencia activa)
 ```bash
-git clone https://github.com/tu-usuario/xylozoid.git
-cd xylozoid
+git clone https://github.com/xylozoid/bot-premium.git
+cd bot-premium
 ```
 
-2. **Instala las dependencias**
+2. **Verifica tu licencia**
+```bash
+npm run verify-license
+```
+
+3. **Instala las dependencias**
 ```bash
 npm install
 ```
 
-3. **Configura las variables de entorno**
+4. **Configura las variables de entorno**
 Crea un archivo `.env` en la raíz del proyecto:
 ```env
 # Discord Bot
@@ -99,11 +149,19 @@ MONGODB_URI=mongodb://localhost:27017/xylozoid
 BASE_URL=http://localhost:3000
 PORT=3000
 
+# Licencia Premium (requerido)
+XYLOZOID_LICENSE_KEY=tu_clave_de_licencia
+
 # Opcional: Top.gg para votaciones
 TOP_GG_TOKEN=tu_token
 ```
 
-4. **Inicia el bot**
+5. **Activa tu licencia premium**
+```bash
+npm run activate-license
+```
+
+6. **Inicia el bot**
 ```bash
 node index.js
 ```
@@ -112,6 +170,8 @@ node index.js
 ```
 https://discord.com/api/oauth2/authorize?client_id=TU_CLIENT_ID&permissions=8&scope=bot%20applications.commands
 ```
+
+> ⚠️ **Atención:** El bot solo funcionará correctamente si tu licencia premium está activa y verificada.
 
 ## 📁 Estructura del Proyecto
 
@@ -204,48 +264,65 @@ xylozoid/
 - [ ] Sistema de clans/gremios
 - [ ] Eventos programados automáticos
 
-## 🤝 Contribuir
+## 🤝 Contribuciones
 
-¡Las contribuciones son bienvenidas! Sigue estos pasos:
+Este es un proyecto **premium cerrado**. Las contribuciones externas no están disponibles para el público general.
 
-1. Haz fork del proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+Si eres un desarrollador premium y deseas contribuir:
 
-Por favor, lee nuestras [Guías de Contribución](CONTRIBUTING.md) antes de empezar.
+1. Accede al repositorio privado de contribuidores
+2. Revisa las issues asignadas a tu nivel de licencia
+3. Sigue las guías internas de desarrollo
 
-## 📄 Licencia
+Para más información, contacta al equipo de soporte.
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+## 📄 Licencia de Uso
 
-## 🙏 Agradecimientos
+**Xylozoid es software propietario bajo licencia comercial.**
 
-- **Pogy** - Proyecto base que inspiró esta arquitectura
+- ❌ No es de código abierto
+- ❌ No está bajo licencia MIT/GPL
+- ✅ Licencia personal intransferible
+- ✅ Actualizaciones incluidas mientras la licencia esté activa
+- ✅ Soporte técnico incluido
+
+El uso sin licencia activa es una violación de los términos de servicio.
+
+## 🙏 Créditos
+
+- **Arquitectura base inspirada en Pogy** - Proyecto público de GitHub
 - **Discord.js** - Librería principal del bot
 - **Chart.js** - Gráficos del dashboard
-- **La comunidad de código abierto** - Por su apoyo constante
+- **Equipo de Desarrollo Xylozoid** - Implementación premium y características exclusivas
 
-## 📞 Soporte
+## 📞 Soporte y Ventas
 
-¿Necesitas ayuda? Únete a nuestro servidor de Discord:
+¿Necesitas ayuda o quieres adquirir tu licencia premium?
 
-[![Unirse al Servidor](https://img.shields.io/badge/Discord-Unirse-5865F2?style=for-the-badge&logo=discord&logoColor=white)](TU_LINK_DE_DISCORD)
+[![Discord Oficial](https://img.shields.io/badge/Discord-Soporte-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/xylozoid)
+[![Sitio Web](https://img.shields.io/badge/Sitio_Web-xylozoid.dev-GOLD?style=for-the-badge&logo=star&logoColor=white)](https://xylozoid.dev)
+[![Planes Premium](https://img.shields.io/badge/Planes-Premium-GOLD?style=for-the-badge&logo=star&logoColor=white)](https://xylozoid.dev/premium)
 
-## 🌐 Enlaces Útiles
+## 🌐 Enlaces Oficiales
 
-- [Documentación Completa](https://xylozoid.dev/docs)
-- [Dashboard Demo](https://xylozoid.dev/demo)
-- [Reportar Bugs](https://github.com/tu-usuario/xylozoid/issues)
-- [Solicitar Features](https://github.com/tu-usuario/xylozoid/discussions)
+- [📚 Documentación Completa](https://xylozoid.dev/docs)
+- [🎮 Dashboard Demo](https://xylozoid.dev/demo)
+- [💎 Adquirir Licencia Premium](https://xylozoid.dev/premium)
+- [📋 Términos de Servicio](https://xylozoid.dev/terms)
+- [🔒 Política de Privacidad](https://xylozoid.dev/privacy)
 
 ---
 
 <div align="center">
 
-**Hecho con ❤️ por la comunidad para la comunidad**
+**Xylozoid - El bot premium que tu servidor merece**
 
-⭐ ¡Dale estrella si te gusta el proyecto!
+💎 **Funcionalidades exclusivas que no encontrarás en bots gratuitos**
+
+🎮 **Próximamente: Eventos de Temporada con juegos exclusivos**
+
+[Adquiere tu licencia ahora](https://xylozoid.dev/premium) | [Únete al Discord oficial](https://discord.gg/xylozoid)
+
+⭐ ¡Recomienda Xylozoid a otros servidores!
 
 </div>
