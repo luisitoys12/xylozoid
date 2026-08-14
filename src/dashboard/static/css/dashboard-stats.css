@@ -1,0 +1,360 @@
+/* Dashboard Stats Enhancement - Modern Statistics Styles */
+
+/* Stats Container */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+/* Stat Cards */
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 25px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.stat-card.moderation {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.stat-card.levels {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.stat-card.economy {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.stat-card.automod {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.stat-card.guild {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Charts Section */
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.chart-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chart-title i {
+  color: #667eea;
+}
+
+/* Leaderboards */
+.leaderboard-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.leaderboard-container {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.leaderboard-title i {
+  color: #f5576c;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.leaderboard-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.leaderboard-rank {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.rank-1 { background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #333; }
+.rank-2 { background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%); color: #333; }
+.rank-3 { background: linear-gradient(135deg, #cd7f32 0%, #e09856 100%); color: white; }
+.rank-other { background: #667eea; color: white; }
+
+.leaderboard-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #667eea;
+}
+
+.leaderboard-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.leaderboard-username {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.leaderboard-stat {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.leaderboard-value {
+  font-weight: bold;
+  color: #667eea;
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+/* Guild Info Grid */
+.guild-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.guild-info-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.guild-info-item:hover {
+  background: #e9ecef;
+}
+
+.guild-info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.guild-info-icon.members { background: #667eea; color: white; }
+.guild-info-icon.channels { background: #f5576c; color: white; }
+.guild-info-icon.roles { background: #43e97b; color: white; }
+.guild-info-icon.online { background: #ffd700; color: #333; }
+
+.guild-info-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.guild-info-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Loading Animation */
+.loading-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-container,
+  .charts-section,
+  .leaderboard-section {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  .stat-card {
+    padding: 20px;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .chart-container,
+  .leaderboard-container {
+    padding: 15px;
+  }
+  
+  .guild-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .chart-container,
+[data-theme="dark"] .leaderboard-container {
+  background: #2d3748;
+  color: #fff;
+}
+
+[data-theme="dark"] .chart-title,
+[data-theme="dark"] .leaderboard-title {
+  color: #fff;
+}
+
+[data-theme="dark"] .leaderboard-item {
+  background: #4a5568;
+}
+
+[data-theme="dark"] .leaderboard-item:hover {
+  background: #5a6678;
+}
+
+[data-theme="dark"] .leaderboard-username {
+  color: #fff;
+}
+
+[data-theme="dark"] .leaderboard-stat {
+  color: #cbd5e0;
+}
+
+[data-theme="dark"] .guild-info-item {
+  background: #4a5568;
+}
+
+[data-theme="dark"] .guild-info-item:hover {
+  background: #5a6678;
+}
+
+[data-theme="dark"] .guild-info-label {
+  color: #cbd5e0;
+}
+
+[data-theme="dark"] .guild-info-value {
+  color: #fff;
+}
