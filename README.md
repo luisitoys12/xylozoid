@@ -1,216 +1,251 @@
+# 🤖 Xylozoid - Bot de Discord de Nueva Generación
 
-<h1 align="center">
- <br>
-  <a href="https://github.com/peterhanania"><img src="https://dev.pogy.gg/favicon.ico"></a>
-  <br>
-  Pogy the Discord Bot [DJS V13]
- <br>
-</h1>
+> **Un proyecto de código abierto basado en la arquitectura de Pogy**, diseñado para competir con los mejores bots del mercado como ProBot, Dyno y MEE6.
 
-<h3 align=center>A fully customizable bot built with 147 commands, 11 categories and a dashboard using discord.js v13</h3>
+[![Discord](https://img.shields.io/badge/Discord-Bot-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Node.js-v16+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 
-[README-hindi.md](/README-hi-HI.md)
-[README-polish](/README-pl-PL.md)
+## ✨ Características Principales
 
-<div align=center>
+### 🛡️ Auto-Moderación Avanzada
+Sistema inteligente de protección para tu comunidad:
+- Anti-spam, anti-links y anti-invites
+- Filtro de palabras prohibidas configurable
+- Anti-mass mention y anti-ghost ping
+- Sistema de punishments (warn, mute, kick, ban)
+- Roles y canales ignorados
+- Logging automático de acciones
 
- <a href="https://github.com/mongodb/mongo">
-    <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white" alt="mongo">
-  </a>
-  
-  <a href="https://github.com/discordjs">
-    <img src="https://img.shields.io/badge/discord.js-v13.6.0-blue.svg?logo=npm" alt="discordjs">
-  </a>
+### 🏆 Sistema de Niveles y XP
+Mantén a tu comunidad activa con recompensas:
+- Ganancia de XP por mensajes y voz
+- Notificaciones de level up personalizadas
+- Comandos `/rank` y `/leaderboard`
+- Multiplicadores para roles premium
+- Configuración de roles por nivel
 
-  <a href="https://github.com/peterhanania/Pogy/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-Apache%202-blue" alt="license">
-  </a>
+### 💰 Economía Completa
+Un sistema financiero robusto:
+- Balance personal y banco
+- Recompensas diarias (/daily)
+- Inventario y tienda (en desarrollo)
+- Estadísticas de ganancias y gastos
+- Apuestas y minijuegos (próximamente)
 
-</div>
+### ⚡ Slash Commands Modernos
+Interfaz nativa de Discord:
+- Todos los comandos disponibles como slash commands
+- Respuestas interactivas y ephemeral
+- Autocompletado y validaciones
+- Permisos granulares por comando
 
-<p align="center">
-  <a href="#about">About</a>
-  •
-  <a href="#features">Features</a>
-  •
-  <a href="#installation">Installation</a>
-  •
-  <a href="#setting-up">Setting Up</a>
-  •
-  <a href="#license">License</a>
-  •
-  <a href="#donate">Donate</a>
-  •
-  <a href="#credits">Credits</a>
-</p>
+### 🌐 Dashboard Web Profesional
+Panel de control completo desde el navegador:
+- Estadísticas en tiempo real con gráficos
+- Configuración de módulos sin código
+- Asistente de configuración rápida (Quick Setup)
+- Gestión de AutoMod visual
+- Leaderboards interactivos
+- Diseño responsive y dark mode
+- Actualización automática cada 30s
 
-## Community Updates
-[Pogy + Slash commands by eYuM](https://github.com/Pogy-Bot/Pogy/tree/eyum-contributions)
+## 🚀 ¿Por qué Xylozoid?
 
-## About
+| Característica | Xylozoid | ProBot | Dyno |
+|---------------|----------|--------|------|
+| Código Abierto | ✅ Sí | ❌ No | ❌ No |
+| Personalizable | ✅ 100% | ⚠️ Limitado | ⚠️ Limitado |
+| Sin Límites | ✅ Gratis | ⚠️ Premium | ⚠️ Premium |
+| Dashboard Moderno | ✅ Sí | ✅ Sí | ✅ Sí |
+| AutoMod Avanzado | ✅ Sí | ✅ Sí | ✅ Sí |
+| Sistema de Niveles | ✅ Sí | ✅ Sí | ❌ No |
+| Economía | ✅ Sí | ✅ Sí | ⚠️ Básico |
+| Soporte 24/7 | ✅ Comunidad | ✅ Pago | ✅ Pago |
 
-Pogy is a discord bot that we made exactly 2 years ago, the code was broken so we decided to fix the bugs and make it a multipurpose discord.js v13 bot! You can click [this](https://pogy.xyz/invite) link to invite the official Bot! Also, you can join the official [Pogy's Support Server](https://pogy.xyz/support) for assistance.
+## 📦 Instalación
 
-If you liked this repository, feel free to leave a star ⭐
+### Requisitos Previos
+- Node.js v16 o superior
+- MongoDB (local o Atlas)
+- Una aplicación de Discord Developer Portal
 
-## Features
+### Pasos de Instalación
 
-**147** commands and **11** different categories!
-
-- **alt detector:** Blocks alts from the guild
-- **applications:** Manage applications from the website
-- **config:** Configure server settings
-- **utility:** Some utility commands
-- **economy:** Started but not done
-- **fun:** A ton of commands to keep your server active
-- **images:** Image Commands
-- **information:** Information Commands
-- **moderation:** Mod commands to moderate your discord server
-- **reaction roles:** Reaction roles
-- **tickets:** Guild tickets for support
-
-Pogy even has the following features on the website
-
-- **Ticket Transcripts** + **Application Transcripts**
-- **Contact & Report** page
-- **Welcome messages** and **farewell messages** including embeds.
-- Full customizable **Logging** and **moderation**
-- Full customizable **Suggestions** and **Server Reports**
-- A built in **Premium system**
-- A built in maintenance mode
-- A members Page
-- Auto Mod, Levelling, and Commands ( not done )
-- Built in TOP.gg API
-
- <h1 align="center">
-  <a href="https://github.com/peterhanania"><img src="https://i.imgur.com/On7mMNg.jpg["></a>
-</h1>
-
-**Webhooks: (for Developer)**
-With Pogy You can even log everything using webhooks directly from the config file!
-
-<h1 align="center">
-  <a href="https://github.com/peterhanania"><img src="https://i.imgur.com/vbGuLdL.jpg"></a>
-</h1>
-
-## Installation
-
-First clone the repo:
-
-```
-git clone https://github.com/Pogy-Bot/Pogy.git
+1. **Clona el repositorio**
+```bash
+git clone https://github.com/tu-usuario/xylozoid.git
+cd xylozoid
 ```
 
-After cloning, run an
-
-```
+2. **Instala las dependencias**
+```bash
 npm install
 ```
 
-## Setting Up
+3. **Configura las variables de entorno**
+Crea un archivo `.env` en la raíz del proyecto:
+```env
+# Discord Bot
+CLIENT_ID=tu_client_id
+TOKEN=tu_token_bot
+CLIENT_SECRET=tu_client_secret
 
-Your `config.json` should follow
+# MongoDB
+MONGODB_URI=mongodb://localhost:27017/xylozoid
 
-- "developers": ID of Developers who can use the owner commands [ARRAY],
-- "status": Your bot Status [STRING],
-- "discord": Your bot's Support Server [STRING],
-- "dashboard": If you want to enable the website dashboard ["true" / "false"] (STRING),
-- "server": Your support server id [STRING],
-- "prefix": Your default bot prefix [STRING],
+# Dashboard
+BASE_URL=http://localhost:3000
+PORT=3000
 
-Webhooks
-- "logs": Webhook URL for command logs.,
--  "maintenance_logs": Webhook URL for maintenance logs (if it gets triggered automatically),
--  "ratelimit_logs": Webhook URL for ratelimit logs,
-- "blacklist": Webhook URL for blacklist logs,
--  "report": Webhook URL for report logs,
--  "contact": Webhook URL for contact logs,
--  "bugs": Webhook URL for bugs logs,
--  "premium": Webhook URL for premium logs,
--  "suggestions": Webhook URL for suggestions logs,,
--  "votes": Webhook URL for votes logs,
--  "errors": Webhook URL for errors logs,
--  "auth": Webhook URL for auth logs,
--  "joinsPublic": Webhook URL to announce server joins in the support server,
--  "joinsPrivate": Webhook URL to announce server joins in your private server,
--  "leavesPublic": Webhook URL to announce server leaves in the support server,
--  "leavesPrivate": Webhook URL to announce server leaves in the private server,
--  "maintenance": Automatically enable maintenance mode if it gets rate limited ["true" / "false"] (STRING),
--  "maintenance_threshold": The amount of ratelimit triggers needed to enable maintenance mode [STRING] recommended [3-10]. Example "3",
--  "invite_link": Your bot's invite link,
+# Opcional: Top.gg para votaciones
+TOP_GG_TOKEN=tu_token
+```
 
-SEO
--  "enabled": if you want to enable SEO ["true" / "false"] (STRING),
--  "title": Your website's SEO title [STRING],
--  "description": Your website's SEO description [STRING],
+4. **Inicia el bot**
+```bash
+node index.js
+```
 
-##
+5. **Invita al bot a tu servidor**
+```
+https://discord.com/api/oauth2/authorize?client_id=TU_CLIENT_ID&permissions=8&scope=bot%20applications.commands
+```
 
+## 📁 Estructura del Proyecto
 
-Your `.env` should match
+```
+xylozoid/
+├── src/
+│   ├── commands/           # Comandos tradicionales (prefix)
+│   ├── slash/              # Slash commands modernos
+│   │   ├── moderation/     # Comandos de moderación
+│   │   ├── utility/        # Comandos utilitarios
+│   │   ├── economy/        # Comandos de economía
+│   │   └── structures/     # Clases base para slash commands
+│   ├── handlers/           # Manejadores de eventos
+│   │   ├── CommandHandler.js
+│   │   ├── SlashCommandHandler.js
+│   │   ├── AutoModHandler.js
+│   │   └── XPHandler.js
+│   ├── database/
+│   │   ├── schemas/        # Modelos de MongoDB
+│   │   │   ├── Rank.js
+│   │   │   ├── Economy.js
+│   │   │   ├── AutoMod.js
+│   │   │   └── ...
+│   │   └── index.js
+│   ├── dashboard/
+│   │   ├── routes/         # Rutas de la API
+│   │   ├── static/         # CSS, JS, imágenes
+│   │   └── views/          # Plantillas EJS
+│   ├── events/             # Eventos de Discord
+│   └── utils/              # Utilidades y helpers
+├── .env
+├── .env.example
+├── index.js
+├── package.json
+└── README.md
+```
 
-THE ONES NEEDED
-- TOKEN=YOUR BOT TOKEN
-- MONGO=YOUR MONGO DATABASE URL
-- SESSION_SECRET=A RANDOM STRING FOR SESSION SECURITY (Ex. 6B4E8&G#%Z&##bqcyEL5)
-- AUTH_DOMAIN=Your Auth Domain (Ex. https://pogy.xyz or http://localhost:3000) no slash at the end.
-- MAIN_CLIENT_ID=the client id of your main application
-- AUTH_CLIENT_ID=the client id of your auth application
-- AUTH_CLIENT_SECRET= the client secret of your auth application
-- PORT= the port of your website | default=3000
+## 🎯 Comandos Disponibles
 
-OPTIONAL
-- ANALYTICS=your google analytics code,
-- GOOGLE_SITE_VERIFICATION=your google site verification code,
-- DATADOG_API_KEY=your data dog api key,
-- DATADOG_API_HOST= your data dog api host,
-- DATADOG_API_PREFIX= your data dog api prefix,
-- DBL_AUTH= your dbl authorization
+### Moderación
+- `/ban` - Banear usuarios con razón
+- `/kick` - Expulsar usuarios
+- `/mute` - Silenciar temporalmente
+- `/warn` - Advertir usuarios
+- `/clear` - Limpiar mensajes
 
+### Utilidad
+- `/rank` - Ver nivel propio o de otros
+- `/leaderboard` - Top 10 del servidor
+- `/serverinfo` - Información del servidor
+- `/userinfo` - Información de usuario
 
+### Economía
+- `/balance` - Ver balance y banco
+- `/daily` - Recompensa diaria
+- `/shop` - Tienda de items (próximamente)
+- `/work` - Trabajar por monedas (próximamente)
 
-**The callbacks in Discord's dev portal**
-This will have 2 parts, callback for the main client ID, and the other for the auth client ID. I did this so that the main client doesn't get ratelimited. You can use the same Id for main_client_id and auth_client_id and put the 3 callbacks in the same application.
+### Configuración
+- `/setup` - Asistente de configuración
+- `/automod` - Configurar auto-moderación
+- `/levels` - Configurar sistema de niveles
 
-MAIN CLIENT ID
-yourdomain/thanks example https://pogy.xyz/thanks or http://localhost:3000/thanks
-yourdomain/window example https://pogy.xyz/window or http://localhost:3000/window
+## 🌟 Roadmap
 
-AUTH CLIENT ID
-yourdomain/callback example https://pogy.xyz/callback or http://localhost:3000/callback
+### Fase 1 (Completado ✅)
+- [x] Sistema de slash commands
+- [x] Auto-moderación avanzada
+- [x] Sistema de niveles y XP
+- [x] Economía básica
+- [x] Dashboard con estadísticas
 
+### Fase 2 (En Desarrollo 🚧)
+- [ ] Comandos de economía completos (work, shop, gamble)
+- [ ] Sistema de warns con schema dedicado
+- [ ] Dashboard para configuración de AutoMod
+- [ ] Sistema de tickets de soporte
+- [ ] Logs interactivos con filtros
 
-**TOP.gg**
-To add top.gg to your site, add `DBL_AUTH` as your dbl api key to the `.env` file. And `yourdomain/dblwebhook` as a webhook url on top.gg's site settings. Example:  `https://yourbot.com/dblwebhook
+### Fase 3 (Planeado 📅)
+- [ ] Sistema de música optimizado
+- [ ] Minijuegos multijugador
+- [ ] Integración con Twitch/YouTube
+- [ ] API pública para desarrolladores
+- [ ] Widgets embebibles para webs
 
-**Replit**
-To run on replit you must install node js `v.16.9.1` to do so go to bash (the bash terminal on your repl) and paste: `npm init -y && npm i --save-dev node@16.9.0 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH`
+### Fase 4 (Futuro 🔮)
+- [ ] IA para moderación de contenido
+- [ ] Traducción automática de mensajes
+- [ ] Sistema de clans/gremios
+- [ ] Eventos programados automáticos
 
-Pease make sure you have enabled `Privileged Intents` on your Discord [developer portal](https://discordapp.com/developers/applications/). You can find these intents under the "Bot" section, and there are two ticks you have to switch on. For more information on Gateway Intents, check out [this](https://discordjs.guide/popular-topics/intents.html#the-intents-bit-field-wrapper) link.
+## 🤝 Contribuir
 
-You can launch the bot with `npm start`
+¡Las contribuciones son bienvenidas! Sigue estos pasos:
 
-**Important Note:** Before you join the support server for help, read the guide carefully.
+1. Haz fork del proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-### Emojis
+Por favor, lee nuestras [Guías de Contribución](CONTRIBUTING.md) antes de empezar.
 
-- You can change the emojis in: <br>
-  1- `assets/emojis.json` <br>
-  2- `data/emoji.js`
+## 📄 Licencia
 
-### Colors
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
-- You can change the colors in `data/colors.js`
+## 🙏 Agradecimientos
 
-## License
+- **Pogy** - Proyecto base que inspiró esta arquitectura
+- **Discord.js** - Librería principal del bot
+- **Chart.js** - Gráficos del dashboard
+- **La comunidad de código abierto** - Por su apoyo constante
 
-Released under the [Apache License](http://www.apache.org/licenses/LICENSE-2.0) license.
+## 📞 Soporte
 
-## Donate
+¿Necesitas ayuda? Únete a nuestro servidor de Discord:
 
-You can donate Pogy and make it stronger than ever [by clicking here](https://paypal.me/pogybot)!
+[![Unirse al Servidor](https://img.shields.io/badge/Discord-Unirse-5865F2?style=for-the-badge&logo=discord&logoColor=white)](TU_LINK_DE_DISCORD)
 
-## Credits
-[Old Credits](https://github.com/peterhanania/pogy#credits)
-- Peter Hanania [DJS Rewrite] - [github.com/peterhanania](github.com/peterhanania)
-- JANO [DJS Rewrite] - [github.com/wlegit](github.com/wlegit)
+## 🌐 Enlaces Útiles
+
+- [Documentación Completa](https://xylozoid.dev/docs)
+- [Dashboard Demo](https://xylozoid.dev/demo)
+- [Reportar Bugs](https://github.com/tu-usuario/xylozoid/issues)
+- [Solicitar Features](https://github.com/tu-usuario/xylozoid/discussions)
+
+---
+
+<div align="center">
+
+**Hecho con ❤️ por la comunidad para la comunidad**
+
+⭐ ¡Dale estrella si te gusta el proyecto!
+
+</div>
